@@ -1,3 +1,18 @@
+@font-face {
+  font-family: splash;
+  src: url(../fonts/Splash-Regular.ttf);
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: roboto;
+  src: url(../fonts/Roboto-Bold.ttf);
+  font-weight: 700;
+  font-style: normal; }
 * {
   margin: 0;
   padding: 0; }
@@ -6,6 +21,57 @@
   width: 100%;
   max-width: 1140px;
   margin: 0 auto; }
+
+/* Page header */
+.logo {
+  color: white;
+  font-family: splash, arial, sans-serif;
+  font-weight: 400;
+  font-size: 40px; }
+
+.header-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.page-header {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 60px;
+  background-color: #000;
+  opacity: 75%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between; }
+
+.application-form-button {
+  border-radius: 9px;
+  border: 1px solid black;
+  color: black;
+  background: white;
+  font-family: roboto, arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  width: 130px;
+  height: 30px;
+  margin: 4px 0 0 0; }
+
+.application-form-button:hover {
+  border: 1px solid white;
+  color: white;
+  background: black; }
+
+.application-form-button:active {
+  border: 1px solid black;
+  color: black;
+  background: white; }
+
+.tel-number {
+  text-transform: uppercase;
+  color: white;
+  font-family: splash, arial, sans-serif;
+  font-weight: 400; }
 
 /* Carousel base class */
 .carousel {
@@ -28,6 +94,9 @@
     height: 100%; } }
 @media screen and (max-width: 769px) {
   .carousel-photo {
-    width: auto; } }
+    width: auto; }
+
+  .page-header {
+    padding: 0 10px; } }
 
 /*# sourceMappingURL=style.css.map */
