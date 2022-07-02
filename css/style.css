@@ -92,6 +92,31 @@
 .carousel-photo {
   width: 100%; }
 
+/* About me */
+.about-me {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem; }
+
+.about-me-description {
+  width: 100%;
+  max-width: 400px; }
+
+.about-me-description-header {
+  font-family: roboto, arial, sans-serif;
+  font-weight: 700;
+  font-style: normal; }
+
+.about-me-description-txt {
+  font-family: roboto, arial, sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+.about-me-image {
+  display: flex;
+  width: 100%;
+  max-width: 300px; }
+
 @media screen and (max-width: 950px) {
   .carousel-photo {
     height: 100%; } }

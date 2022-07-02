@@ -17,7 +17,8 @@
     font-style: normal
 
 
-$font-family: splash, arial, sans-serif
+$font-header: splash, arial, sans-serif
+$font-main: roboto, arial, sans-serif
 
 *
     margin: 0
@@ -32,7 +33,7 @@ $font-family: splash, arial, sans-serif
 
 .logo
     color: white
-    font-family: $font-family
+    font-family: $font-header
     font-weight: 400
     font-size: 40px
     margin-bottom: 0
@@ -60,7 +61,7 @@ $font-family: splash, arial, sans-serif
     border: 1px solid black    
     color: black
     background: white
-    font-family: roboto, arial, sans-serif
+    font-family: $font-main
     font-weight: 700
     font-style: normal
     width: 130px
@@ -80,7 +81,7 @@ $font-family: splash, arial, sans-serif
 .tel-number
     text-transform: uppercase
     color: white
-    font-family: $font-family
+    font-family: $font-header
     font-weight: 400
     margin-bottom: 0
 
@@ -99,6 +100,32 @@ $font-family: splash, arial, sans-serif
 
 .carousel-photo
     width: 100%
+
+/* About me*/
+
+.about-me
+    display: flex
+    justify-content: space-between
+    margin-bottom: 4rem
+
+.about-me-description
+    width: 100%
+    max-width: 400px
+
+.about-me-description-header
+    font-family: $font-main
+    font-weight: 700
+    font-style: normal
+
+.about-me-description-txt
+    font-family: $font-main
+    font-weight: 400
+    font-style: normal
+
+.about-me-image
+    display: flex
+    width: 100%
+    max-width: 300px
 
 @media screen and ( max-width: 950px  )
     .carousel-photo
