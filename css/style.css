@@ -96,7 +96,6 @@
 .about-me {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 4rem;
   margin: 0 30px 4rem 30px; }
 
 .about-me-description {
@@ -116,7 +115,8 @@
   font-family: roboto, arial, sans-serif;
   font-weight: 400;
   font-style: normal;
-  line-height: 2; }
+  line-height: 3;
+  font-size: 18px; }
 
 .about-me-description-txt span {
   font-weight: 700; }
@@ -126,6 +126,10 @@
   width: 100%;
   max-width: 300px; }
 
+@media screen and (max-width: 1024px) {
+  .about-me-description-txt {
+    line-height: 2.5;
+    font-size: 16px; } }
 @media screen and (max-width: 950px) {
   .carousel-photo {
     height: 100%; } }
@@ -143,6 +147,21 @@
     font-size: 15px; }
 
   .application-form-button {
-    margin: 4px 0 2px 0; } }
+    margin: 4px 0 2px 0; }
+
+  .about-me-description-txt {
+    line-height: 2;
+    font-size: 15px; } }
+@media screen and (max-width: 700px) {
+  .about-me {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 0 auto 4rem auto; }
+
+  .about-me-description {
+    margin: 20px auto 0 auto; }
+
+  .about-me-description-txt {
+    margin: 0 20px 0 20px; } }
 
 /*# sourceMappingURL=style.css.map */
