@@ -281,5 +281,8 @@
 
   .portfolio-mosaic-preview {
     width: 300px; } }
+@media screen and (orientation: landscape) {
+  .portfolio-mosaic-item svg {
+    top: 12%; } }
 
 /*# sourceMappingURL=style.css.map */
