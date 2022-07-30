@@ -48,6 +48,10 @@
   align-items: center; }
 
 .application-form-button {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 9px;
   border: 1px solid black;
   color: black;
@@ -62,7 +66,8 @@
 .application-form-button:hover {
   border: 1px solid white;
   color: white;
-  background: black; }
+  background: black;
+  transition: 300ms; }
 
 .application-form-button:active {
   border: 1px solid black;
@@ -187,8 +192,8 @@
 
 .portfolio-mosaic-item svg {
   position: fixed;
-  top: 7%;
-  right: 4%;
+  top: 3%;
+  right: 3%;
   bottom: 0;
   left: auto;
   z-index: 16;
@@ -253,6 +258,20 @@
   color: #41464b; }
 
 /* Footer */
+.webpage-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px 1rem 20px; }
+
+.webpage-footer-copyriht {
+  font-family: roboto, arial, sans-serif;
+  font-weight: 700;
+  margin: 0; }
+
+.webpage-footer-copyriht-wrp {
+  display: flex;
+  align-items: center; }
+
 .social-networcs-icon {
   display: flex;
   justify-content: space-between;
