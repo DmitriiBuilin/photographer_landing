@@ -60,8 +60,8 @@
   font-weight: 700;
   font-style: normal;
   width: 130px;
-  height: 30px;
-  margin: 4px 0 0 0; }
+  height: 42px;
+  margin: 0 0 0 0; }
 
 .application-form-button:hover {
   border: 1px solid white;
@@ -73,13 +73,6 @@
   border: 1px solid black;
   color: black;
   background: white; }
-
-.tel-number {
-  text-transform: uppercase;
-  color: white;
-  font-family: splash, arial, sans-serif;
-  font-weight: 400;
-  margin-bottom: 0; }
 
 /* Carousel base class */
 .carousel {
@@ -279,11 +272,9 @@
   fill: #FFFFFF; }
 
 .contact-me-whatsapp:hover {
-  color: #25D366;
-  background-color: #FFFFFF; }
-
-.contact-me-whatsapp:hover path {
-  fill: #25D366; }
+  opacity: 60%;
+  color: #FFFFFF;
+  transition: 300ms; }
 
 .contact-me-telegramm {
   text-transform: uppercase;
@@ -307,11 +298,9 @@
   fill: #FFFFFF; }
 
 .contact-me-telegramm:hover {
-  color: #0088cc;
-  background-color: #FFFFFF; }
-
-.contact-me-telegramm:hover path {
-  fill: #0088cc; }
+  opacity: 60%;
+  color: #FFFFFF;
+  transition: 300ms; }
 
 /* Footer */
 .webpage-footer {
@@ -369,7 +358,7 @@
     font-size: 15px; }
 
   .application-form-button {
-    margin: 4px 0 2px 0; }
+    margin: 0 0 2px 0; }
 
   .about-me-description-txt {
     line-height: 2;
