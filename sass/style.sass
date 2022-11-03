@@ -1,10 +1,4 @@
 @font-face 
-    font-family: splash
-    src: url(../fonts/Splash-Regular.ttf)
-    font-weight: 400
-    font-style: normal
-
-@font-face 
     font-family: roboto
     src: url(../fonts/Roboto-Regular.ttf)
     font-weight: 400
@@ -17,10 +11,10 @@
     font-style: normal
 
 
-$font-header: splash, arial, sans-serif
+$font-header: roboto, arial, sans-serif
 $font-main: roboto, arial, sans-serif
 $background-section: #80808C
-$font-color: #ffffff
+$font-color: #FFFFFF
 
 
 *
@@ -31,6 +25,9 @@ $font-color: #ffffff
     width: 100%
     max-width: 1140px
     margin: 0 auto
+
+.hidden
+    display: none
 
 /* Page header*/
 
@@ -87,8 +84,6 @@ $font-color: #ffffff
     background: white
 
 /* Carousel base class */
-.carousel 
-    margin-bottom: 4rem
 
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption 
@@ -107,7 +102,7 @@ $font-color: #ffffff
 .about-me
     display: flex
     justify-content: space-between
-    margin: 0 30px 4rem 30px
+    padding: 3rem 30px 3rem 30px
 
 .about-me-description
     width: 100%
@@ -140,15 +135,20 @@ $font-color: #ffffff
 /* Portfolio*/
 
 .portfolio
+    background-color: $background-section
     width: 100%
     height: auto
-    background-color: $background-section
+
+
+.portfolio-wrp
+    width: 100%
+    height: auto
     display: flex
     flex-direction: column
     align-items: center
     position: relative
     padding-bottom: 40px
-    margin: 0 0 4rem 0
+    margin: 0 0 2rem 0
 
 .portfolio-header
     font-family: $font-header
@@ -168,7 +168,6 @@ $font-color: #ffffff
 .portfolio-mosaic-preview
     width: 200px
     height: auto
-    border: 3px solid white
     box-shadow: 8px 6px 10px rgba(0,0,0,0.5)
     margin: 0 0 12px 0
 
@@ -193,8 +192,6 @@ $font-color: #ffffff
     width: 85%
     height: auto
     position: fixed
-    border: 3px solid white
-    box-shadow: 8px 6px 10px rgba(0,0,0,0.5)
     margin: 0px auto
     display: flex
 
@@ -240,21 +237,24 @@ $font-color: #ffffff
 #pop-up-12:target
     display: flex
 
-
 /* Contact-me */
 
 .contact-me
-    height: 250px
+    background-color: $background-section
+    padding: 3rem 0 3rem 0
+
+.contact-me-wrp
+    height: 300px
     display: flex
     flex-direction: column
     justify-content: space-between
     align-items: center
-    margin: 0 0 4rem 0
+
 
 .contact-me-txt
     font-family: $font-header
     font-weight: 700
-    color: #41464b
+    color: black
 
 .contact-me-whatsapp
     text-transform: uppercase
@@ -308,12 +308,38 @@ $font-color: #ffffff
     color: #FFFFFF
     transition: 300ms
 
+.contact-me-mail
+    background-color: rgb(0, 95, 249)
+    padding: 10px 70px
+    border-radius: 12px
+    color: #FFFFFF
+    text-decoration: none
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 260px
+    border: 1px solid rgb(0, 95, 249)
+
+.contact-me-mail p
+    margin-bottom: 0
+    font-family: $font-main
+    font-weight: 700
+
+.contact-me-mail path
+    fill: #FFFFFF
+
+
+.contact-me-mail:hover
+    opacity: 60%
+    color: #FFFFFF
+    transition: 300ms    
+
 /* Footer*/
 
 .webpage-footer
     display: flex
     justify-content: space-between
-    margin: 0 20px 1rem 20px
+    margin: 1rem 20px 1rem 20px
 
 .webpage-footer-copyriht
     font-family: $font-main
@@ -344,6 +370,57 @@ $font-color: #ffffff
     background-color: #80808C
     cursor: pointer
 
+/* Blog */
+
+.bd-placeholder-img
+    font-size: 1.125rem
+    text-anchor: middle
+    -webkit-user-select: none
+    -moz-user-select: none
+    user-select: none        
+
+.b-example-divider
+    height: 3rem
+    background-color: rgba(0, 0, 0, .1)
+    border: solid rgba(0, 0, 0, .15)
+    border-width: 1px 0
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15)
+
+.b-example-vr
+    flex-shrink: 0
+    width: 1.5rem
+    height: 100vh
+
+.bi 
+    vertical-align: -.125em
+    fill: currentColor
+
+.nav-scroller 
+    position: relative
+    z-index: 2
+    height: 2.75rem
+    overflow-y: hidden
+
+.nav-scroller .nav
+    display: flex
+    flex-wrap: nowrap
+    padding-bottom: 1rem
+    margin-top: -1px
+    overflow-x: auto
+    text-align: center
+    white-space: nowrap
+    -webkit-overflow-scrolling: touch
+
+.show-post:hover
+    cursor: pointer
+
+.list-unstyled
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.list-unstyled li
+    margin: 0 10px
 
 /* Adaptive */
 
@@ -370,6 +447,8 @@ $font-color: #ffffff
     .about-me-description-txt
         line-height: 2
         font-size: 15px
+    .bd-placeholder-img-lg 
+        font-size: 3.5rem
 
 @media screen and ( max-width: 700px )
     .about-me
