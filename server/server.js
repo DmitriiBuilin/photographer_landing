@@ -7,7 +7,7 @@ app.use(express.json());
 app.use('/', express.static('.'));
 
 app.get('/catalogData', (req, res) => { 
-    fs.readFile('server/db/photos.json','utf8', (err, data)=> {
+    fs.readFile('server/db/photocards.json','utf8', (err, data)=> {
         if(err){
             console.log('Error');
         } else {

@@ -1,10 +1,7 @@
    "use strict";
 
    const app = new Vue({
-      // el: '#app',
-      data: {
-
-      },
+      el: '#app',
       methods: {
          getJson(url){
             return fetch(url)
@@ -14,7 +11,7 @@
                 })
         },
       }
-   }).$mount("#app");
+   });
 
    document.querySelector('.show-post').addEventListener('click', (event) => {
       event.preventDefault;
