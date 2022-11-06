@@ -11,7 +11,6 @@ Vue.component('photo', {
             .then(data => {
                 for(let photo of data){
                     this.photos.push(photo);
-                    console.log(this.photos)
                 }                                    
         });
     },
@@ -32,6 +31,6 @@ Vue.component('photo', {
 Vue.component('photocard', {
     props: ['photo', 'img'],
     template: `
-        <img class="portfolio-mosaic-preview" :src="img" alt="photo">
+        <img class="portfolio-mosaic-preview" :id="photo.id" :src="img" alt="photo" >
     `
 });
