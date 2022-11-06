@@ -11,6 +11,7 @@ Vue.component('photo', {
             .then(data => {
                 for(let photo of data){
                     this.photos.push(photo);
+                    console.log(this.photos)
                 }                                    
         });
     },
@@ -18,8 +19,10 @@ Vue.component('photo', {
     <div class="portfolio-wrp container">
         <h1 class="portfolio-header">Lorem ipsum dolor sit.</h1>
         <div class="portfolio-mosaic">
-        <photocard v-for="photocard of photos"
-            :img="photos.img"
+        <photocard v-for="photo of photos"
+            :key="photo.id"
+            :img="photo.img"
+            :photo="photo"
         ></photocard>
         </div>
     </div>
@@ -27,7 +30,7 @@ Vue.component('photo', {
 });
 
 Vue.component('photocard', {
-    props: ['img'],
+    props: ['photo', 'img'],
     template: `
         <img class="portfolio-mosaic-preview" :src="img" alt="photo">
     `

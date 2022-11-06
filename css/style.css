@@ -141,7 +141,8 @@
   font-style: normal;
   font-size: 50px;
   color: #FFFFFF;
-  margin: 0.7rem auto; }
+  margin: 0.7rem auto;
+  text-align: center; }
 
 .portfolio-mosaic {
   margin: 20px 25px 0 25px;
