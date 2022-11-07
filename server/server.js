@@ -2,9 +2,11 @@ const express = require('express');
 const fs = require('fs');
 
 const app = express(); 
+const bigphoto = require('./photoRouter');
 
 app.use(express.json());
 app.use('/', express.static('.'));
+app.use('/photos', bigphoto);
 
 app.get('/catalogData', (req, res) => { 
     fs.readFile('server/db/photos.json','utf8', (err, data)=> {

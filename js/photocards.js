@@ -14,23 +14,22 @@ Vue.component('photo', {
                 }                                    
         });
     },
+    methods: {
+        openWindow(){
+            document.getElementById('bigphoto').style.display = 'flex';
+            document.querySelector('.portfolio-mosaic').addEventListener('click', (event) => {
+                let idKey = event.target.id;
+                console.log(idKey);
+             });
+             
+        },
+    },
     template: `
     <div class="portfolio-wrp container">
         <h1 class="portfolio-header">Lorem ipsum dolor sit.</h1>
         <div class="portfolio-mosaic">
-        <photocard v-for="photo of photos"
-            :key="photo.id"
-            :img="photo.img"
-            :photo="photo"
-        ></photocard>
+            <img v-for="photo of photos" class="portfolio-mosaic-preview" :id="photo.id" :src="photo.img" alt="photo" @click="openWindow()">
         </div>
     </div>
-    `
-});
-
-Vue.component('photocard', {
-    props: ['photo', 'img'],
-    template: `
-        <img class="portfolio-mosaic-preview" :id="photo.id" :src="img" alt="photo" >
     `
 });
