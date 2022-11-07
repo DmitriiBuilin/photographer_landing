@@ -19,6 +19,7 @@ Vue.component('photo', {
             document.getElementById('bigphoto').style.display = 'flex';
             document.querySelector('.portfolio-mosaic').addEventListener('click', (event) => {
                 let idKey = event.target.id;
+                this.$parent.photoNumber = idKey;
                 console.log(idKey);
              });
              

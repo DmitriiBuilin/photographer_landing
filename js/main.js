@@ -2,6 +2,9 @@
 
    const app = new Vue({
       el: '#app',
+      data: {
+         photoNumber: '0'
+      },
       methods: {
          getJson(url){
             return fetch(url)

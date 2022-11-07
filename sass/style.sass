@@ -191,7 +191,7 @@ $font-color: #FFFFFF
     align-items: center
 
 .portfolio-mosaic-img
-    width: 85%
+    width: 100%
     height: auto
     position: fixed
     margin: 0px auto
@@ -438,13 +438,14 @@ $font-color: #FFFFFF
     .about-me-description-txt
         margin: 0 20px 0 20px
 
-@media screen and ( max-width: 460px )
+@media screen and ( max-width: 480px )
     .portfolio-header
         font-size: 38px
     .portfolio-mosaic
         flex-direction: column
     .portfolio-mosaic-preview
         width: 200px*1.5
+        max-height: 125px*1.5
 @media screen and (max-width: 700px)
     .portfolio-mosaic-item svg
         top: 3%
