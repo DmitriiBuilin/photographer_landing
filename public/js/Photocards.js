@@ -11,16 +11,15 @@ Vue.component('photo', {
             .then(data => {
                 for(let photo of data){
                     this.photos.push(photo);
-                }                                    
+                }                                                   
         });
-    },
+    },    
     methods: {
         openWindow(){
             document.getElementById('bigphoto').style.display = 'flex';
             document.querySelector('.portfolio-mosaic').addEventListener('click', (event) => {
                 let idKey = event.target.id;
                 this.$parent.photoNumber = idKey;
-                console.log(idKey);
              });
              
         },
